@@ -1,0 +1,47 @@
+package calculator;
+
+import java.util.Scanner; // Import the Scanner class
+
+public class Main {
+    public static void main(String[] args) {
+        // Defined earnings
+    int bubblegumEarned = 202;
+    int toffeeEarned = 118;
+    int iceCreamEarned = 2250;
+    int milkChocolateEarned = 1680;
+    int doughnutEarned = 1075;
+    int pancakeEarned = 80;
+    int income = bubblegumEarned + toffeeEarned + iceCreamEarned + milkChocolateEarned + doughnutEarned + pancakeEarned;
+    
+
+        // Output initial earnings information
+        System.out.println("Earned amount:");
+        System.out.println("Bubblegum: $" + bubblegumEarned);
+        System.out.println("Toffee: $" + toffeeEarned);
+        System.out.println("Ice cream: $" + iceCreamEarned);
+        System.out.println("Milk chocolate: $" + milkChocolateEarned);
+        System.out.println("Doughnut: $" + doughnutEarned);
+        System.out.println("Pancake: $" + pancakeEarned);
+        System.out.println("\nIncome: $" + income);
+
+        // Creating a scanner object for input
+        Scanner scanner = new Scanner(System.in);
+
+        // Asking for staff expenses
+        System.out.println("Staff expenses:");
+        int staffExpenses = scanner.nextInt(); // Read integer input
+
+        // Asking for other expenses
+        System.out.println("Other expenses:");
+        int otherExpenses = scanner.nextInt(); // Read integer input
+
+        // Calculating net income
+        int netIncome = income - (staffExpenses + otherExpenses);
+
+        // Outputting the net income
+        System.out.println("Net income: $" + netIncome);
+
+        // Close scanner
+        scanner.close();
+    }
+}
